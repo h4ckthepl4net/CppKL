@@ -13,18 +13,60 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Characters">
+      <UniqueIdentifier>{d68978ca-44b8-4394-b3e4-f65d3167e67d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Characters">
+      <UniqueIdentifier>{e81c2bbf-38f9-41b6-bc95-527ad4efff1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utils">
+      <UniqueIdentifier>{fbcfe9f5-6aaa-4e2e-b494-94c18208dd24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utils">
+      <UniqueIdentifier>{cfcb6e7f-cdcd-4ea4-84a5-6417f7ae4fbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\KeyLoggerTypes">
+      <UniqueIdentifier>{27d1d55a-c807-413a-b431-01b5c03a0e19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\KeyLoggerTypes">
+      <UniqueIdentifier>{e0184047-b5c4-440c-af36-65ed5a2a5ae5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="KeyLogger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CharacterHandler.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>Source Files\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="LoopKeyLogger.cpp">
+      <Filter>Source Files\KeyLoggerTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="HookKeyLogger.cpp">
+      <Filter>Source Files\KeyLoggerTypes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CharacterHandler.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Header Files\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="LoopKeyLogger.h">
+      <Filter>Header Files\KeyLoggerTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="HookKeyLogger.h">
+      <Filter>Header Files\KeyLoggerTypes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
