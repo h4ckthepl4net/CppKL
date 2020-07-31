@@ -2,7 +2,7 @@
 
 std::map<unsigned char, Character*> CharacterHandler::specialChars;
 
-static unsigned char chars[] = { VK_LBUTTON, VK_RBUTTON, VK_CANCEL, VK_MBUTTON, VK_BACK, VK_TAB, VK_CLEAR,
+static unsigned char keys[] = { VK_LBUTTON, VK_RBUTTON, VK_CANCEL, VK_MBUTTON, VK_BACK, VK_TAB, VK_CLEAR,
 						VK_RETURN, VK_SHIFT, VK_CONTROL, VK_MENU, VK_PAUSE, VK_CAPITAL, VK_ESCAPE,
 						VK_PRIOR, VK_NEXT, VK_END, VK_HOME, VK_LEFT, VK_UP, VK_RIGHT, VK_DOWN, VK_SELECT,
 						VK_PRINT, VK_EXECUTE, VK_SNAPSHOT, VK_INSERT, VK_DELETE, VK_HELP, VK_LWIN, VK_RWIN,
@@ -25,9 +25,9 @@ static const char* keyText[] = {"left click", "right click", "^C", "middle click
 
 void CharacterHandler::initSpecialChars()
 {
-	for (unsigned int i = 0; i < sizeof(chars); i++)
+	for (unsigned int i = 0; i < sizeof(keys); i++)
 	{
-		specialChars.emplace(std::make_pair(chars[i], new Character(chars[i], keyText[i])));
+		specialChars.emplace(std::make_pair(keys[i], new Character(keys[i], keyText[i])));
 	}
 }
 

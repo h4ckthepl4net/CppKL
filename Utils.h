@@ -3,7 +3,8 @@
 #define UTILS_H
 
 namespace utils {
-	bool isKeyAlphaNum(unsigned char);
+	bool is_alpha_num_key(unsigned char);
+	bool is_modifier_key(unsigned char);
 }
 	
 #endif
