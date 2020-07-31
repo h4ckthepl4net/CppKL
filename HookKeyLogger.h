@@ -4,6 +4,7 @@
 
 #include <Windows.h>
 #include <ostream>
+#include <set>
 #include "CharacterHandler.h"
 #include "Character.h"
 #include "Utils.h"
